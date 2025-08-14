@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Krishna Mahajan - AI-Assisted Android & Web App Developer | No-Code Innovator. Turning Ideas into Apps — Fast. Expert in AI-assisted development, Android apps, and rapid MVP prototyping."
+    />
+    <meta
+      name="keywords"
+      content="AI-assisted developer, Android developer, No-code apps, rapid MVP development, Firebase developer, AI Android apps, Krishna Mahajan"
+    />
+    <meta name="author" content="Krishna Mahajan" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Krishna Mahajan - AI-Assisted Developer"
+    />
+    <meta
+      property="og:description"
+      content="Turning Ideas into Apps — Fast. Expert in AI-assisted and no-code app development."
+    />
+    <meta property="og:image" content="/assets/social-preview.jpg" />
+    <meta property="og:url" content="https://krishnamahajan.dev" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Krishna Mahajan - AI-Assisted Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Turning Ideas into Apps — Fast. Expert in AI-assisted and no-code app development."
+    />
+    <meta name="twitter:image" content="/assets/social-preview.jpg" />
+
+    <title>Krishna Mahajan - AI-Assisted Android & Web App Developer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#2563eb" />
+
+    <!-- Preconnect to external fonts and resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Schema.org JSON-LD structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "name": "Krishna Mahajan",
+            "jobTitle": "AI-Assisted Android & Web App Developer",
+            "description": "No-Code Innovator specializing in rapid MVP development and AI-assisted app creation",
+            "url": "https://krishnamahajan.dev",
+            "sameAs": [
+              "https://linkedin.com/in/krishnamahajan",
+              "https://github.com/krishnamahajan"
+            ],
+            "knowsAbout": [
+              "AI-assisted development",
+              "Android development",
+              "No-code apps",
+              "Firebase",
+              "MVP development"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "name": "Krishna Mahajan Portfolio",
+            "url": "https://krishnamahajan.dev",
+            "description": "Portfolio of Krishna Mahajan - AI-Assisted Android & Web App Developer"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://krishnamahajan.dev"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "About",
+                "item": "https://krishnamahajan.dev#about"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Projects",
+                "item": "https://krishnamahajan.dev#projects"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <!-- Google Analytics - TODO: Replace with your GA4 measurement ID -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "GA_MEASUREMENT_ID");
+    </script>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="#hero">Krishna Mahajan</a>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="#hero" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#blog" class="nav-link">Blog</a>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <div
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero">
+        <div class="hero-background">
+          <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              <span class="hero-greeting">Hi, I'm</span>
+              <span class="hero-name">Krishna Mahajan</span>
+              <span class="hero-role"
+                >AI-Assisted Android & Web App Developer</span
+              >
+            </h1>
+            <p class="hero-tagline">
+              <span
+                class="typewriter"
+                data-text="Turning Ideas into Apps — Fast."
+              ></span>
+            </p>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">
+                <i class="fas fa-envelope"></i>
+                Hire Me
+              </a>
+              <a href="#projects" class="btn btn-secondary">
+                <i class="fas fa-code"></i>
+                View Projects
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-arrow"></div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content">
+            <div class="about-image">
+              <!-- TODO: Replace with your actual profile image -->
+              <img
+                src="/assets/profile-placeholder.jpg"
+                alt="Krishna Mahajan"
+                class="profile-img"
+              />
+            </div>
+            <div class="about-text">
+              <p class="about-intro">
+                I'm a passionate developer who specializes in turning innovative
+                ideas into market-ready applications using cutting-edge
+                AI-assisted development and no-code tools. With proven
+                experience in launching live Android and web applications, I
+                focus on delivering fast, efficient solutions that drive real
+                business value.
+              </p>
+              <div class="about-objective">
+                <h3>Objective</h3>
+                <p>
+                  Apply proven experience in launching live Android & web
+                  applications using AI-assisted and no-code tools, delivering
+                  market-ready products fast, integrating AI features,
+                  monetization, and rapid MVPs to drive growth.
+                </p>
+              </div>
+              <div class="about-stats">
+                <div class="stat">
+                  <span class="stat-number" data-target="50">0</span>
+                  <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number" data-target="25">0</span>
+                  <span class="stat-label">Apps Launched</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number" data-target="3">0</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills">
+        <div class="container">
+          <h2 class="section-title">Skills & Expertise</h2>
+          <div class="skills-grid">
+            <!-- Core Skills -->
+            <div class="skill-category">
+              <h3 class="skill-category-title">
+                <i class="fas fa-code"></i>
+                Core Skills
+              </h3>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">AI-assisted Development</span>
+                    <span class="skill-percentage">95%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="95"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Android Development</span>
+                    <span class="skill-percentage">90%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="90"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">No-Code Development</span>
+                    <span class="skill-percentage">88%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="88"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">MVP Development</span>
+                    <span class="skill-percentage">92%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="92"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Software Skills -->
+            <div class="skill-category">
+              <h3 class="skill-category-title">
+                <i class="fas fa-tools"></i>
+                Software & Tools
+              </h3>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Firebase</span>
+                    <span class="skill-percentage">90%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="90"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">Android Studio</span>
+                    <span class="skill-percentage">85%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="85"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">VS Code</span>
+                    <span class="skill-percentage">95%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="95"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span class="skill-name">GitHub</span>
+                    <span class="skill-percentage">88%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="88"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Strengths -->
+            <div class="skill-category">
+              <h3 class="skill-category-title">
+                <i class="fas fa-star"></i>
+                Key Strengths
+              </h3>
+              <div class="strengths-grid">
+                <div class="strength-item">
+                  <i class="fas fa-sync-alt"></i>
+                  <span>Adaptable Across Industries</span>
+                </div>
+                <div class="strength-item">
+                  <i class="fas fa-lightbulb"></i>
+                  <span>Strong Problem-Solving</span>
+                </div>
+                <div class="strength-item">
+                  <i class="fas fa-users"></i>
+                  <span>Effective Communication</span>
+                </div>
+                <div class="strength-item">
+                  <i class="fas fa-handshake"></i>
+                  <span>Team Collaboration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="projects-grid">
+            <!-- Project 1: LookMaxPro AI App -->
+            <div class="project-card" data-project="0">
+              <div class="project-image">
+                <!-- TODO: Replace with actual LookMaxPro screenshots -->
+                <img
+                  src="/assets/lookmaxpro-1.png"
+                  alt="LookMaxPro AI App"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <button
+                    class="btn btn-primary project-details-btn"
+                    data-project="0"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View Details
+                  </button>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.pimpre.lookmaxpro"
+                    class="btn btn-secondary"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fab fa-google-play"></i>
+                    Play Store
+                  </a>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-badges">
+                  <span class="badge badge-android">Android</span>
+                  <span class="badge badge-ai">AI</span>
+                  <span class="badge badge-firebase">Firebase</span>
+                </div>
+                <h3 class="project-title">LookMaxPro AI App</h3>
+                <p class="project-description">
+                  AI-based lookmaxing Android app with facial analysis and
+                  personalized suggestions
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Android</span>
+                  <span class="tech-tag">Firebase</span>
+                  <span class="tech-tag">MediaPipe</span>
+                  <span class="tech-tag">AI-assisted dev</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2: Finance Insights Web App -->
+            <div class="project-card" data-project="1">
+              <div class="project-image">
+                <!-- TODO: Replace with actual finance app screenshots -->
+                <img
+                  src="/assets/finance-1.png"
+                  alt="Finance Insights Web App"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <button
+                    class="btn btn-primary project-details-btn"
+                    data-project="1"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View Details
+                  </button>
+                  <a
+                    href="#"
+                    class="btn btn-secondary"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-badges">
+                  <span class="badge badge-web">Web</span>
+                  <span class="badge badge-react">React</span>
+                  <span class="badge badge-firebase">Firebase</span>
+                </div>
+                <h3 class="project-title">Finance Insights Web App</h3>
+                <p class="project-description">
+                  Mini dashboard demo with charts, authentication, and
+                  responsive UI
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Vite</span>
+                  <span class="tech-tag">Tailwind</span>
+                  <span class="tech-tag">Firebase Auth</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3: MVP Prototype with Monetization -->
+            <div class="project-card" data-project="2">
+              <div class="project-image">
+                <!-- TODO: Replace with actual MVP screenshots -->
+                <img
+                  src="/assets/mvp-1.png"
+                  alt="MVP Prototype with Monetization"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <button
+                    class="btn btn-primary project-details-btn"
+                    data-project="2"
+                  >
+                    <i class="fas fa-eye"></i>
+                    View Details
+                  </button>
+                  <a
+                    href="#"
+                    class="btn btn-secondary"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-badges">
+                  <span class="badge badge-mvp">MVP</span>
+                  <span class="badge badge-monetization">Monetization</span>
+                  <span class="badge badge-firebase">Firebase</span>
+                </div>
+                <h3 class="project-title">MVP Prototype w/ Monetization</h3>
+                <p class="project-description">
+                  Rapid MVP with ads/subscription, usage analytics, and landing
+                  page
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Firebase</span>
+                  <span class="tech-tag">Stripe/Ads</span>
+                  <span class="tech-tag">No-code tools</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience & Education Section -->
+      <section id="experience" class="experience">
+        <div class="container">
+          <h2 class="section-title">Experience & Education</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">2023 - Present</div>
+                <h3 class="timeline-title">AI-Assisted Android Developer</h3>
+                <h4 class="timeline-company">Freelance</h4>
+                <ul class="timeline-description">
+                  <li>
+                    Developed and launched LookMaxPro AI app on Google Play
+                    Store
+                  </li>
+                  <li>
+                    Implemented AI-driven facial analysis using MediaPipe and
+                    custom models
+                  </li>
+                  <li>
+                    Integrated Firebase for backend services and user management
+                  </li>
+                  <li>
+                    Achieved rapid development cycles using AI-assisted coding
+                    tools
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">2022 - 2023</div>
+                <h3 class="timeline-title">No-Code App Developer</h3>
+                <h4 class="timeline-company">Various Projects</h4>
+                <ul class="timeline-description">
+                  <li>Built multiple MVP prototypes using no-code platforms</li>
+                  <li>
+                    Implemented monetization strategies including ads and
+                    subscriptions
+                  </li>
+                  <li>Delivered market-ready products in record time</li>
+                  <li>
+                    Collaborated with cross-functional teams across different
+                    industries
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">2021 - 2022</div>
+                <h3 class="timeline-title">Web Developer</h3>
+                <h4 class="timeline-company">Tech Startup</h4>
+                <ul class="timeline-description">
+                  <li>
+                    Developed responsive web applications using modern
+                    frameworks
+                  </li>
+                  <li>Integrated third-party APIs and payment systems</li>
+                  <li>Optimized application performance and user experience</li>
+                  <li>
+                    Mentored junior developers and contributed to code reviews
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-date">2019 - 2021</div>
+                <h3 class="timeline-title">Computer Science Education</h3>
+                <h4 class="timeline-company">University</h4>
+                <ul class="timeline-description">
+                  <li>
+                    Specialized in software engineering and mobile development
+                  </li>
+                  <li>
+                    Completed projects in AI, machine learning, and web
+                    technologies
+                  </li>
+                  <li>Participated in hackathons and coding competitions</li>
+                  <li>Graduated with honors and relevant certifications</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials">
+        <div class="container">
+          <h2 class="section-title">What Clients Say</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "Krishna delivered our Android app ahead of schedule with
+                  exceptional AI features. His expertise in rapid development
+                  and attention to detail made the entire process smooth and
+                  efficient."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <!-- TODO: Replace with actual client photo -->
+                <img
+                  src="/assets/client-1.jpg"
+                  alt="Sarah Johnson"
+                  class="testimonial-avatar"
+                />
+                <div class="testimonial-info">
+                  <h4>Sarah Johnson</h4>
+                  <span>Product Manager, TechCorp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "Working with Krishna was a game-changer for our startup. He
+                  transformed our idea into a monetizable MVP in just weeks, not
+                  months. Highly recommend for any rapid development needs."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <!-- TODO: Replace with actual client photo -->
+                <img
+                  src="/assets/client-2.jpg"
+                  alt="Michael Chen"
+                  class="testimonial-avatar"
+                />
+                <div class="testimonial-info">
+                  <h4>Michael Chen</h4>
+                  <span>Founder, InnovateNow</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "Krishna's ability to adapt across different industries is
+                  remarkable. He understood our finance domain quickly and
+                  delivered a web app that exceeded our expectations."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <!-- TODO: Replace with actual client photo -->
+                <img
+                  src="/assets/client-3.jpg"
+                  alt="Emily Rodriguez"
+                  class="testimonial-avatar"
+                />
+                <div class="testimonial-info">
+                  <h4>Emily Rodriguez</h4>
+                  <span>CTO, FinanceFlow</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Section -->
+      <section id="blog" class="blog">
+        <div class="container">
+          <h2 class="section-title">Latest Blog Posts</h2>
+          <div class="blog-grid">
+            <article class="blog-card">
+              <!-- TODO: Replace with actual blog post image -->
+              <img
+                src="/assets/blog-1.jpg"
+                alt="AI in Mobile Development"
+                class="blog-image"
+                loading="lazy"
+              />
+              <div class="blog-content">
+                <div class="blog-tags">
+                  <span class="tag">AI</span>
+                  <span class="tag">Android</span>
+                </div>
+                <h3 class="blog-title">
+                  How AI is Revolutionizing Mobile App Development
+                </h3>
+                <p class="blog-excerpt">
+                  Explore the latest AI tools and techniques that are
+                  transforming how we build mobile applications, from code
+                  generation to automated testing.
+                </p>
+                <div class="blog-meta">
+                  <span class="blog-date">August 10, 2025</span>
+                  <a href="#" class="blog-read-more"
+                    >Read More <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <!-- TODO: Replace with actual blog post image -->
+              <img
+                src="/assets/blog-2.jpg"
+                alt="No-Code vs Traditional Development"
+                class="blog-image"
+                loading="lazy"
+              />
+              <div class="blog-content">
+                <div class="blog-tags">
+                  <span class="tag">No-Code</span>
+                  <span class="tag">Development</span>
+                </div>
+                <h3 class="blog-title">
+                  No-Code vs Traditional Development: When to Use What
+                </h3>
+                <p class="blog-excerpt">
+                  A comprehensive guide to choosing between no-code platforms
+                  and traditional development approaches for your next project.
+                </p>
+                <div class="blog-meta">
+                  <span class="blog-date">August 5, 2025</span>
+                  <a href="#" class="blog-read-more"
+                    >Read More <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <!-- TODO: Replace with actual blog post image -->
+              <img
+                src="/assets/blog-3.jpg"
+                alt="App Monetization Strategies"
+                class="blog-image"
+                loading="lazy"
+              />
+              <div class="blog-content">
+                <div class="blog-tags">
+                  <span class="tag">Monetization</span>
+                  <span class="tag">Business</span>
+                </div>
+                <h3 class="blog-title">
+                  5 Proven App Monetization Strategies That Actually Work
+                </h3>
+                <p class="blog-excerpt">
+                  Learn from real-world examples of successful app monetization,
+                  including freemium models, in-app purchases, and subscription
+                  strategies.
+                </p>
+                <div class="blog-meta">
+                  <span class="blog-date">July 28, 2025</span>
+                  <a href="#" class="blog-read-more"
+                    >Read More <i class="fas fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2 class="section-title">Let's Work Together</h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <h3>Get In Touch</h3>
+              <p>
+                Ready to turn your idea into a market-ready app? Let's discuss
+                how we can bring your vision to life with cutting-edge
+                AI-assisted development.
+              </p>
+
+              <div class="contact-links">
+                <a
+                  href="https://linkedin.com/in/krishnamahajan"
+                  class="contact-link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-linkedin"></i>
+                  <span>Connect on LinkedIn</span>
+                </a>
+                <a
+                  href="https://github.com/krishnamahajan"
+                  class="contact-link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-github"></i>
+                  <span>View GitHub Profile</span>
+                </a>
+                <a
+                  href="/assets/Krishna-Mahajan-Resume.pdf"
+                  class="contact-link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fas fa-download"></i>
+                  <span>Download Resume</span>
+                </a>
+              </div>
+
+              <div class="play-store-badge">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.pimpre.lookmaxpro"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="/assets/google-play-badge.png"
+                    alt="Get it on Google Play"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  aria-describedby="name-error"
+                />
+                <span class="error-message" id="name-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  aria-describedby="email-error"
+                />
+                <span class="error-message" id="email-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  aria-describedby="message-error"
+                ></textarea>
+                <span class="error-message" id="message-error"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loading" style="display: none">
+                  <i class="fas fa-spinner fa-spin"></i>
+                  Sending...
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-left">
+            <p>&copy; 2025 Krishna Mahajan. All rights reserved.</p>
+          </div>
+          <div class="footer-right">
+            <div class="social-links">
+              <a
+                href="https://linkedin.com/in/krishnamahajan"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://github.com/krishnamahajan"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:krishna@example.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal">
+      <div class="modal-overlay" id="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close" aria-label="Close modal">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-body" id="modal-body">
+          <!-- Project details will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+      <div class="toast-content">
+        <span class="toast-message" id="toast-message"></span>
+        <button
+          class="toast-close"
+          id="toast-close"
+          aria-label="Close notification"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
