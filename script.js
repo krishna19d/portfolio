@@ -41,11 +41,11 @@ const projectsData = [
       "Room Database",
     ],
     images: [
-      "/assets/lookmaxpro-1.png",
-      "/assets/lookmaxpro-2.png",
-      "/assets/lookmaxpro-3.png",
+      "assets/lookmaxpro-1.png",
+      "assets/lookmaxpro-2.png",
+      "assets/lookmaxpro-3.png",
     ],
-    video: "/assets/lookmaxpro-demo.mp4",
+    video: "assets/lookmaxpro-demo.mp4",
     links: {
       playStore:
         "https://play.google.com/store/apps/details?id=com.pimpre.lookmaxpro",
@@ -69,8 +69,8 @@ const projectsData = [
       "Dark/Light theme support",
     ],
     tech: ["React", "Vite", "Tailwind CSS", "Firebase Auth", "Chart.js", "PWA"],
-    images: ["/assets/finance-1.png", "/assets/finance-2.png"],
-    video: "/assets/finance-demo.mp4",
+    images: ["assets/finance-1.png", "assets/finance-2.png"],
+    video: "assets/finance-demo.mp4",
     links: {
       live: "#",
       repo: "#",
@@ -99,8 +99,8 @@ const projectsData = [
       "No-code tools",
       "Analytics",
     ],
-    images: ["/assets/mvp-1.png"],
-    video: "/assets/mvp-demo.mp4",
+    images: ["assets/mvp-1.png"],
+    video: "assets/mvp-demo.mp4",
     links: {
       live: "#",
       repo: "#",
@@ -844,8 +844,8 @@ const performance = {
   preloadCriticalAssets() {
     // Preload hero image and other critical assets
     const criticalAssets = [
-      "/assets/profile-placeholder.jpg",
-      "/assets/lookmaxpro-1.png",
+      "assets/profile-placeholder.jpg",
+      "assets/lookmaxpro-1.png",
     ];
 
     criticalAssets.forEach((asset) => {
