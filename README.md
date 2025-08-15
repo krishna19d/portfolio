@@ -4,7 +4,7 @@ A sleek, modern, fully responsive portfolio website built with vanilla HTML5, CS
 
 ## 🚀 Live Demo
 
-[View Live Portfolio](https://krishnamahajan.dev) (TODO: Replace with your actual domain)
+[View Live Portfolio](https://krishna19d.github.io/portfolio)
 
 ## 🌟 Features
 
