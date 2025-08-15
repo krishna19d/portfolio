@@ -925,6 +925,8 @@ body {
   background: var(--bg-primary);
   border-radius: var(--radius-lg);
   transition: transform var(--transition-normal);
+  min-height: 60px;
+  overflow: hidden;
 }
 
 .strength-item:hover {
@@ -934,11 +936,18 @@ body {
 .strength-item i {
   color: var(--accent-primary);
   font-size: var(--font-size-lg);
+  flex-shrink: 0;
+  min-width: 24px;
 }
 
 .strength-item span {
   font-weight: 500;
   color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 /* Responsive Skills */

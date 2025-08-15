@@ -683,10 +683,10 @@ const contactForm = {
     this.setLoading(true);
 
     try {
-      // Simulate form submission (replace with actual API call)
+      // Submit form using mailto
       await this.submitForm();
       this.showToast(
-        "Message sent successfully! I'll get back to you soon.",
+        "Email client opened! Please send the email to complete your message.",
         "success"
       );
       elements.contactForm.reset();
@@ -769,13 +769,25 @@ const contactForm = {
   },
 
   async submitForm() {
-    // TODO: Replace with actual form submission logic
-    // This could be a serverless function, email service, or backend API
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve({ success: true });
-      }, 1500);
-    });
+    // Get form data
+    const formData = new FormData(elements.contactForm);
+    const name = formData.get("name").trim();
+    const email = formData.get("email").trim();
+    const subject = formData.get("subject").trim() || "Portfolio Contact";
+    const message = formData.get("message").trim();
+
+    // Create mailto link with form data
+    const mailtoSubject = encodeURIComponent(`${subject} - From ${name}`);
+    const mailtoBody = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    );
+    const mailtoLink = `mailto:krishnamali19d@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+    // Open email client
+    window.open(mailtoLink);
+
+    // Return success for the form handler
+    return Promise.resolve({ success: true });
   },
 
   setLoading(loading) {
