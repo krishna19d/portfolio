@@ -5,17 +5,25 @@ This directory contains all the images, documents, and media files for the portf
 ## Current Status
 
 ### ✅ Completed Assets
-- `favicon.ico` - Website favicon (32x32px) 
+
+- `favicon.ico` - Website favicon (32x32px)
 - `google-play-badge.png` - Google Play Store badge
 - `lookmaxpro-1.png` - LookMaxPro app screenshot
-- `finance-1.png` - Finance app screenshot  
+- `finance-1.png` - Finance app screenshot
 - `mvp-1.png` - MVP prototype screenshot
 - `profile-placeholder.jpg` - Profile photo placeholder
 - `social-preview.png` - Social media preview image
 - `apple-touch-icon.png` - iOS home screen icon (180x180px)
 - `Krishna-Mahajan-Resume.pdf` - Resume placeholder
+- `client-1.svg` - Sarah Johnson avatar (SVG format)
+- `client-2.svg` - Michael Chen avatar (SVG format)
+- `client-3.svg` - Emily Rodriguez avatar (SVG format)
+- `blog-1.svg` - AI blog post image (SVG format)
+- `blog-2.svg` - No-code blog post image (SVG format)
+- `blog-3.svg` - Monetization blog post image (SVG format)
 
-### 🔄 HTML Placeholders (Need Conversion)
+### 🔄 HTML Placeholders (Optional)
+
 - `client-1.html` - Sarah Johnson avatar (needs conversion to .jpg)
 - `client-2.html` - Michael Chen avatar (needs conversion to .jpg)
 - `client-3.html` - Emily Rodriguez avatar (needs conversion to .jpg)
