@@ -2,6 +2,28 @@
 
 This directory contains all the images, documents, and media files for the portfolio website.
 
+## Current Status
+
+### ✅ Completed Assets
+- `favicon.ico` - Website favicon (32x32px) 
+- `google-play-badge.png` - Google Play Store badge
+- `lookmaxpro-1.png` - LookMaxPro app screenshot
+- `finance-1.png` - Finance app screenshot  
+- `mvp-1.png` - MVP prototype screenshot
+- `profile-placeholder.jpg` - Profile photo placeholder
+- `social-preview.png` - Social media preview image
+- `apple-touch-icon.png` - iOS home screen icon (180x180px)
+- `Krishna-Mahajan-Resume.pdf` - Resume placeholder
+
+### 🔄 HTML Placeholders (Need Conversion)
+- `client-1.html` - Sarah Johnson avatar (needs conversion to .jpg)
+- `client-2.html` - Michael Chen avatar (needs conversion to .jpg)
+- `client-3.html` - Emily Rodriguez avatar (needs conversion to .jpg)
+- `blog-1.html` - AI blog post image (needs conversion to .jpg)
+- `blog-2.html` - No-code blog post image (needs conversion to .jpg)
+- `blog-3.html` - Monetization blog post image (needs conversion to .jpg)
+- `social-preview.html` - Alternative social preview (optional)
+
 ## Required Files
 
 ### Profile and Branding
