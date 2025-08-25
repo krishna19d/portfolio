@@ -298,8 +298,8 @@ If you encounter any issues:
 **Krishna Mahajan**
 
 - **Email**: krishna@example.com (TODO: Update with your email)
-- **LinkedIn**: [linkedin.com/in/krishnamahajan](https://linkedin.com/in/krishnamahajan)
-- **GitHub**: [github.com/krishnamahajan](https://github.com/krishnamahajan)
+- **LinkedIn**: [www.linkedin.com/in/mahajankrishna](https://www.linkedin.com/in/mahajankrishna)
+- **GitHub**: [github.com/krishna19d](https://github.com/krishna19d)
 
 ---
 
