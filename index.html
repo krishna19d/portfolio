@@ -73,6 +73,12 @@
 </head>
 <body>
 
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Noise / Grain Texture Overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
   <!-- ============================================
        NAVIGATION
        ============================================ -->
@@ -86,6 +92,7 @@
         <a href="#skills" class="nav__link" role="menuitem">Skills</a>
         <a href="#journey" class="nav__link" role="menuitem">Journey</a>
         <a href="#contact" class="nav__link" role="menuitem">Contact</a>
+        <span class="nav__indicator" id="nav-indicator" aria-hidden="true"></span>
       </div>
       <a href="#contact" class="nav__cta btn btn--sm">Let's Talk</a>
       <button class="nav__toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -114,8 +121,9 @@
          1. HERO
          ============================================ -->
     <section id="hero" class="hero" aria-label="Introduction">
-      <!-- Parallax background layers -->
+      <!-- Reactive Canvas Gradient Mesh + Parallax background layers -->
       <div class="hero__bg" aria-hidden="true">
+        <canvas id="hero-mesh" class="hero__mesh"></canvas>
         <div class="hero__gradient"></div>
         <svg class="hero__shape hero__shape--grid" viewBox="0 0 400 400" fill="none" aria-hidden="true">
           <line x1="0" y1="100" x2="400" y2="100" stroke="rgba(99,102,241,0.06)" stroke-width="1"/>
@@ -150,7 +158,7 @@
 
       <div class="container hero__content">
         <p class="hero__label">AI Product Engineer</p>
-        <h1 class="hero__title">Krushna Mali</h1>
+        <h1 class="hero__title"><span class="text-gradient">Krushna Mali</span></h1>
         <p class="hero__subtitle">I turn ideas into real, deployed, monetized AI products.<br>From architecture to App Store — I own the full lifecycle.</p>
         <div class="hero__actions">
           <a href="#work" class="btn btn--primary">
@@ -176,7 +184,7 @@
       <div class="container">
         <div class="proof__grid">
           <div class="proof__item">
-            <span class="proof__number" data-count="1000" data-suffix="+">0</span>
+            <span class="proof__number" data-count="1000" data-suffix="+">1K+</span>
             <span class="proof__label">Downloads</span>
           </div>
           <div class="proof__item">
@@ -192,7 +200,7 @@
             <span class="proof__label">IDBI Hackathon</span>
           </div>
           <div class="proof__item">
-            <span class="proof__number" data-count="5">0</span>
+            <span class="proof__number" data-count="5">5</span>
             <span class="proof__label">Products Built</span>
           </div>
         </div>
@@ -204,7 +212,7 @@
          ============================================ -->
     <section class="philosophy" aria-label="Product philosophy">
       <div class="container">
-        <h2 class="section__title">I don't just build demos.</h2>
+        <h2 class="section__title"><span class="text-gradient">I don't just build demos.</span></h2>
         <p class="philosophy__text">Every project I take on follows a single trajectory — from an idea worth solving, through AI-augmented development, to a product real people use. I measure success in deployments, not side-projects.</p>
         <div class="philosophy__pipeline">
           <div class="pipeline__step">
@@ -255,12 +263,13 @@
 
         <!-- Project 1: Facethetic AI -->
         <article class="project" data-project="facethetic">
+          <span class="project__index" aria-hidden="true">01</span>
           <div class="project__visual">
             <img src="assets/lookmaxpro-1.png" alt="Facethetic AI app showing dashboard with facial analysis scores and feature breakdown" width="600" height="400" loading="eager">
           </div>
           <div class="project__content">
             <div class="project__header">
-              <span class="badge badge--live">🟢 Live — Google Play</span>
+              <span class="badge badge--live">Live — Google Play</span>
               <span class="project__category">AI Mobile App</span>
             </div>
             <h3 class="project__title">Facethetic AI</h3>
@@ -317,15 +326,16 @@
 
         <!-- Project 2: Conviq AI -->
         <article class="project" data-project="conviq">
+          <span class="project__index" aria-hidden="true">02</span>
           <div class="project__visual">
             <div class="project__abstract" aria-label="Conviq AI concept visualization">
-              <svg viewBox="0 0 600 400" fill="none" aria-hidden="true">
+              <svg class="svg-animated svg-conviq" viewBox="0 0 600 400" fill="none" aria-hidden="true">
                 <rect width="600" height="400" rx="16" fill="var(--bg-raised)"/>
                 <rect x="40" y="40" width="200" height="320" rx="24" stroke="var(--accent)" stroke-width="1.5" fill="none" opacity="0.3"/>
                 <rect x="60" y="80" width="160" height="20" rx="4" fill="var(--accent-muted)"/>
                 <rect x="60" y="110" width="120" height="12" rx="3" fill="rgba(255,255,255,0.05)"/>
                 <rect x="60" y="140" width="160" height="60" rx="8" fill="var(--accent-muted)"/>
-                <circle cx="90" cy="170" r="12" stroke="var(--accent)" stroke-width="1" fill="none" opacity="0.5"/>
+                <circle class="svg-pulse" cx="90" cy="170" r="12" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
                 <rect x="110" y="160" width="90" height="8" rx="2" fill="rgba(255,255,255,0.08)"/>
                 <rect x="110" y="175" width="60" height="6" rx="2" fill="rgba(255,255,255,0.04)"/>
                 <rect x="60" y="220" width="160" height="60" rx="8" fill="rgba(255,255,255,0.03)"/>
@@ -333,17 +343,17 @@
                 <rect x="150" y="300" width="70" height="32" rx="16" fill="rgba(255,255,255,0.05)"/>
                 <!-- Chat bubbles -->
                 <rect x="300" y="60" width="260" height="280" rx="16" stroke="rgba(255,255,255,0.06)" stroke-width="1" fill="none"/>
-                <rect x="320" y="90" width="140" height="36" rx="18" fill="var(--accent-muted)"/>
-                <rect x="400" y="140" width="140" height="36" rx="18" fill="rgba(255,255,255,0.05)"/>
-                <rect x="320" y="190" width="160" height="36" rx="18" fill="var(--accent-muted)"/>
-                <rect x="380" y="240" width="120" height="36" rx="18" fill="rgba(255,255,255,0.05)"/>
+                <rect class="svg-float-1" x="320" y="90" width="140" height="36" rx="18" fill="var(--accent-muted)"/>
+                <rect class="svg-float-2" x="400" y="140" width="140" height="36" rx="18" fill="rgba(255,255,255,0.05)"/>
+                <rect class="svg-float-1" x="320" y="190" width="160" height="36" rx="18" fill="var(--accent-muted)"/>
+                <rect class="svg-float-2" x="380" y="240" width="120" height="36" rx="18" fill="rgba(255,255,255,0.05)"/>
                 <rect x="320" y="300" width="220" height="32" rx="16" stroke="rgba(255,255,255,0.08)" stroke-width="1" fill="none"/>
               </svg>
             </div>
           </div>
           <div class="project__content">
             <div class="project__header">
-              <span class="badge badge--dev">🟡 In Development</span>
+              <span class="badge badge--dev">In Development</span>
               <span class="project__category">AI Conversation App</span>
             </div>
             <h3 class="project__title">Conviq AI</h3>
@@ -393,9 +403,10 @@
 
         <!-- Project 3: WealthMate AI -->
         <article class="project" data-project="wealthmate">
+          <span class="project__index" aria-hidden="true">03</span>
           <div class="project__visual">
             <div class="project__abstract" aria-label="WealthMate AI concept visualization">
-              <svg viewBox="0 0 600 400" fill="none" aria-hidden="true">
+              <svg class="svg-animated svg-wealthmate" viewBox="0 0 600 400" fill="none" aria-hidden="true">
                 <rect width="600" height="400" rx="16" fill="var(--bg-raised)"/>
                 <!-- Dashboard wireframe -->
                 <rect x="40" y="40" width="520" height="40" rx="8" fill="rgba(255,255,255,0.03)"/>
@@ -403,8 +414,8 @@
                 <rect x="90" y="54" width="80" height="12" rx="3" fill="rgba(255,255,255,0.08)"/>
                 <!-- Chart area -->
                 <rect x="40" y="100" width="320" height="180" rx="12" fill="rgba(255,255,255,0.02)" stroke="var(--border)" stroke-width="1"/>
-                <polyline points="60,240 100,220 140,230 180,190 220,200 260,160 300,170 340,140" stroke="var(--accent)" stroke-width="2" fill="none" opacity="0.6"/>
-                <polyline points="60,240 100,230 140,235 180,210 220,220 260,195 300,200 340,180" stroke="#22c55e" stroke-width="2" fill="none" opacity="0.4"/>
+                <polyline class="svg-wave-accent" points="60,240 100,220 140,230 180,190 220,200 260,160 300,170 340,140" stroke="var(--accent)" stroke-width="2.5" fill="none"/>
+                <polyline class="svg-wave-green" points="60,240 100,230 140,235 180,210 220,220 260,195 300,200 340,180" stroke="#22c55e" stroke-width="2" fill="none" opacity="0.6"/>
                 <!-- Side cards -->
                 <rect x="380" y="100" width="180" height="80" rx="10" fill="rgba(255,255,255,0.03)" stroke="var(--border)" stroke-width="1"/>
                 <rect x="400" y="120" width="60" height="10" rx="3" fill="var(--accent-muted)"/>
@@ -421,7 +432,7 @@
           </div>
           <div class="project__content">
             <div class="project__header">
-              <span class="badge badge--hackathon">🔵 Hackathon MVP / Prototype</span>
+              <span class="badge badge--hackathon">Hackathon MVP / Prototype</span>
               <span class="project__category">AI FinTech</span>
             </div>
             <h3 class="project__title">WealthMate AI</h3>
@@ -471,20 +482,19 @@
 
         <!-- Project 4: OpthalmoAI -->
         <article class="project" data-project="opthalmoai">
+          <span class="project__index" aria-hidden="true">04</span>
           <div class="project__visual">
             <div class="project__abstract" aria-label="OpthalmoAI concept visualization">
-              <svg viewBox="0 0 600 400" fill="none" aria-hidden="true">
+              <svg class="svg-animated svg-opthalmo" viewBox="0 0 600 400" fill="none" aria-hidden="true">
                 <rect width="600" height="400" rx="16" fill="var(--bg-raised)"/>
                 <!-- Eye scan concept -->
                 <circle cx="200" cy="200" r="100" stroke="var(--accent)" stroke-width="1" fill="none" opacity="0.2"/>
                 <circle cx="200" cy="200" r="70" stroke="var(--accent)" stroke-width="1.5" fill="none" opacity="0.3"/>
-                <circle cx="200" cy="200" r="35" fill="var(--accent-muted)"/>
-                <circle cx="200" cy="200" r="15" fill="var(--accent)" opacity="0.3"/>
+                <circle class="svg-radar" cx="200" cy="200" r="35" fill="var(--accent-muted)"/>
+                <circle cx="200" cy="200" r="15" fill="var(--accent)" opacity="0.5"/>
                 <!-- Scan lines -->
-                <line x1="80" y1="200" x2="120" y2="200" stroke="var(--accent)" stroke-width="1" opacity="0.4"/>
-                <line x1="280" y1="200" x2="320" y2="200" stroke="var(--accent)" stroke-width="1" opacity="0.4"/>
-                <line x1="200" y1="80" x2="200" y2="120" stroke="var(--accent)" stroke-width="1" opacity="0.4"/>
-                <line x1="200" y1="280" x2="200" y2="320" stroke="var(--accent)" stroke-width="1" opacity="0.4"/>
+                <line class="svg-scan-h" x1="80" y1="200" x2="320" y2="200" stroke="var(--accent)" stroke-width="1.5" opacity="0.6"/>
+                <line class="svg-scan-v" x1="200" y1="80" x2="200" y2="320" stroke="var(--accent)" stroke-width="1.5" opacity="0.6"/>
                 <!-- Data panel -->
                 <rect x="370" y="60" width="190" height="280" rx="12" fill="rgba(255,255,255,0.02)" stroke="var(--border)" stroke-width="1"/>
                 <rect x="390" y="85" width="80" height="12" rx="3" fill="var(--accent-muted)"/>
@@ -498,7 +508,7 @@
           </div>
           <div class="project__content">
             <div class="project__header">
-              <span class="badge badge--concept">⚪ Concept / Prototype</span>
+              <span class="badge badge--concept">Concept / Prototype</span>
               <span class="project__category">AI HealthTech</span>
             </div>
             <h3 class="project__title">OpthalmoAI</h3>
@@ -537,12 +547,13 @@
 
         <!-- Project 5: Tripvisor -->
         <article class="project" data-project="tripvisor">
+          <span class="project__index" aria-hidden="true">05</span>
           <div class="project__visual">
             <img src="assets/tripvisor-1.png" alt="Tripvisor app showing trip planning interface with destination selection and mood-based recommendations" width="600" height="400" loading="lazy">
           </div>
           <div class="project__content">
             <div class="project__header">
-              <span class="badge badge--concept">⚪ Concept / Prototype</span>
+              <span class="badge badge--concept">Concept / Prototype</span>
               <span class="project__category">AI Travel App</span>
             </div>
             <h3 class="project__title">Tripvisor</h3>
